@@ -1,82 +1,51 @@
-# Lightweight React Template for KAVIA
+# PhotoFeed: Instagram-Clone Frontend
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A modern, lightweight React frontend app that mimics the Instagram feed interface—**using only mock data** (no backend).
 
 ## Features
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- **Instagram-like feed:** Posts stacked vertically, responsive and centered
+- **Mock data:** Users, posts, likes & comments in local JSON/arrays (see `src/mock/`)
+- **Interactivity:** Like/unlike posts, add comments—instant UI update (in-memory state only)
+- **Search:** Top header with "PhotoFeed" branding and a search box to filter posts by caption or username
+- **Accessibility:** Semantic HTML, alt text, focus styling, ARIA labels for all interactive elements & forms
+- **Theme:** Light modern UI with blue/cyan accents
+- **Organized code:** Modular components—see `src/components/`, types in `src/types.js`, hooks in `src/hooks/`
+- **No backend or authentication required**
 
-## Getting Started
+## Running Locally
 
-In the project directory, you can run:
+Run these commands _inside this directory_:
 
-### `npm start`
-
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
+```bash
+npm install
+npm start
 ```
 
-### Components
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+## Folder Structure
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+- `src/components/`: Modular UI components (Header, Feed, PostCard, LikeButton, CommentList, CommentForm)
+- `src/mock/`: Static mock data—users, posts, comments
+- `src/hooks/usePosts.js`: App state & interaction logic for likes/comments/search
+- `src/App.js`: App entrypoint (wires it all together)
+- Theme defined in `src/App.css`
 
-## Learn More
+## Tests
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Test support is pre-installed (Jest + React Testing Library). Minimal test stubs only—see `src/App.test.js`.
 
-### Code Splitting
+## Customization & Theming
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+You can change brand colors by editing CSS variables at the top of `src/App.css`.
 
-### Analyzing the Bundle Size
+## Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- All changes (likes/comments) are **in-memory** and reset on reload.
+- Demo is for learning and UI showcase.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+MIT
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

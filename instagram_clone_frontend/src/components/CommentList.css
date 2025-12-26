@@ -1,0 +1,27 @@
+.comment-list {
+  margin: 0.25em 0 0.9em;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+.comment-list__item {
+  display: flex;
+  align-items: center;
+  font-size: 0.97em;
+  margin-bottom: 0.2em;
+  gap: 0.35em;
+}
+.comment-list__avatar {
+  border-radius: 50%;
+  margin-right: 0.35em;
+  object-fit: cover;
+  border: 1px solid #06b6d4;
+}
+.comment-list__user {
+  color: #3b82f6;
+  font-weight: 500;
+  margin-right: 0.4em;
+}
+.comment-list__text {
+  color: #111827;
+}

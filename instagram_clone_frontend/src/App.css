@@ -1,13 +1,22 @@
 /* CSS Variables for Theme Management */
 :root {
-  /* Light theme colors */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --text-primary: #282c34;
-  --text-secondary: #61dafb;
+  /* App-specific light theme */
+  --primary: #3b82f6;
+  --success: #06b6d4;
+  --secondary: #64748b;
+  --error: #EF4444;
+  --background: #f9fafb;
+  --surface: #fff;
+  --text: #111827;
+
+  /* CSS for legacy theme compatibility */
+  --bg-primary: var(--surface);
+  --bg-secondary: var(--background);
+  --text-primary: var(--text);
+  --text-secondary: var(--primary);
   --border-color: #e9ecef;
-  --button-bg: #007bff;
-  --button-text: #ffffff;
+  --button-bg: var(--primary);
+  --button-text: #fff;
 }
 
 [data-theme="dark"] {

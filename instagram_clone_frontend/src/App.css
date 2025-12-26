@@ -9,12 +9,33 @@
   --surface: #fff;
   --text: #111827;
 
-  /* CSS for legacy theme compatibility */
+  /* Brand accent and modern shadow palette */
+  --accent-gradient: linear-gradient(90deg, #3b82f610 0%, #06b6d425 100%);
+  --card-shadow: 0 2px 12px 0 rgba(60,60,100,0.07), 0 1.5px 5px 0 rgba(0,0,0,0.03);
+  --input-shadow-focus: 0 0 0 2px #3b82f655;
+  --border-color: #e6e8ec;
+  --border-subtle: #f3f4f6;
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+  --trans-fast: 0.15s cubic-bezier(.4,0,.2,1);
+  --trans-smooth: 0.28s cubic-bezier(.4,0,.2,1);
+
+  /* Typography scale */
+  --font-main: 'Segoe UI', 'Roboto', 'Oxygen', Arial, sans-serif;
+  --font-size-xs: 0.92rem;
+  --font-size-sm: 1.06rem;
+  --font-size-md: 1.18rem;
+  --font-size-lg: 1.32rem;
+  --line-height-tight: 1.13;
+  --line-height-base: 1.45;
+  --line-height-relaxed: 1.62;
+
+  /* Legacy for compatibility */
   --bg-primary: var(--surface);
   --bg-secondary: var(--background);
   --text-primary: var(--text);
   --text-secondary: var(--primary);
-  --border-color: #e9ecef;
   --button-bg: var(--primary);
   --button-text: #fff;
 }

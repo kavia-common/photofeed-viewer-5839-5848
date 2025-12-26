@@ -1,40 +1,71 @@
 .comment-form {
   display: flex;
-  gap: 0.55em;
-  margin: 0.8em 0 0 0;
+  gap: 0.6em;
+  margin: 1em 0 0 0;
 }
 
 .comment-form__input {
   flex: 1 1 auto;
-  border: 1px solid #e9ecef;
-  border-radius: 7px;
-  padding: 0.48em 0.9em;
-  font-size: 1em;
+  border: 1.3px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.59em 1.18em;
+  font-size: 1.08em;
   outline: none;
-  background: #f9fafb;
-  color: #111827;
-  transition: border-color 0.18s;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  transition: 
+    border-color var(--trans-fast), 
+    box-shadow var(--trans-fast),
+    background var(--trans-fast);
+  margin-bottom: 0;
+  font-weight: 450;
+  min-width: 0;
 }
-.comment-form__input:focus {
-  border-color: #06b6d4;
-  box-shadow: 0 0 0 2px #06b6d455;
+
+.comment-form__input:focus, .comment-form__input:focus-visible {
+  border-color: var(--success);
+  box-shadow: 0 0 0 2.5px #06b6d44a;
+  background: #ecfeff;
+}
+.comment-form__input::placeholder {
+  color: var(--secondary);
+  opacity: 0.92;
+  font-style: italic;
+  font-weight: 350;
+  letter-spacing: 0.01em;
 }
 
 .comment-form__btn {
-  background: #3b82f6;
-  color: #fff;
+  background: var(--primary);
+  color: var(--button-text);
   border: none;
-  border-radius: 7px;
-  padding: 0.48em 1.2em;
+  border-radius: var(--radius-md);
+  padding: 0.52em 1.18em;
   font-size: 1em;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: 
+    background var(--trans-fast),
+    opacity var(--trans-smooth),
+    color var(--trans-fast),
+    box-shadow var(--trans-fast),
+    transform 0.17s;
+  outline: none;
 }
-.comment-form__btn:focus, .comment-form__btn:hover {
-  background: #06b6d4;
+.comment-form__btn:hover, .comment-form__btn:focus-visible {
+  background: var(--success);
+  color: #fff;
+  opacity: 0.96;
+  box-shadow: 0 3px 10px 0 #06b6d422;
+}
+.comment-form__btn:active {
+  background: #38bdf8;
+  opacity: 0.90;
 }
 .comment-form__btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+  background: #cbd5e1;
+  color: #64748b;
 }

@@ -1,27 +1,36 @@
 .comment-list {
-  margin: 0.25em 0 0.9em;
+  margin: 0.21em 0 0.93em;
   padding: 0;
   list-style: none;
   overflow: hidden;
 }
 .comment-list__item {
   display: flex;
-  align-items: center;
-  font-size: 0.97em;
-  margin-bottom: 0.2em;
-  gap: 0.35em;
+  align-items: flex-start;
+  font-size: var(--font-size-xs);
+  margin-bottom: 0.21em;
+  gap: 0.37em;
+  line-height: var(--line-height-relaxed);
+  min-height: 33px;
 }
 .comment-list__avatar {
   border-radius: 50%;
-  margin-right: 0.35em;
+  margin-right: 0.42em;
   object-fit: cover;
-  border: 1px solid #06b6d4;
+  border: 1.3px solid var(--success);
+  width: 27px;
+  height: 27px;
+  margin-top: 0.18em;
 }
 .comment-list__user {
-  color: #3b82f6;
-  font-weight: 500;
-  margin-right: 0.4em;
+  color: var(--primary);
+  font-weight: 600;
+  margin-right: 0.41em;
+  letter-spacing: 0.006em;
+  font-size: 1.02em;
 }
 .comment-list__text {
-  color: #111827;
+  color: var(--text-primary);
+  font-weight: 470;
+  letter-spacing: 0.009em;
 }

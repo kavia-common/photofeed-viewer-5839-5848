@@ -1,29 +1,69 @@
 .like-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.4em;
+  gap: 0.36em;
   background: none;
   border: none;
-  color: #3b82f6;
-  font-size: 1.33em;
+  color: var(--primary);
+  font-size: 1.25em;
   cursor: pointer;
-  padding: 0.1em 0.45em;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s;
+  padding: 0.22em 0.64em 0.22em 0.43em;
+  border-radius: var(--radius-sm);
+  font-weight: 620;
   outline: none;
+  min-width: 46px;
+  min-height: 2.4em;
+  position: relative;
+  -webkit-tap-highlight-color: #3b82f62d;
+  transition: 
+    background var(--trans-smooth),
+    color var(--trans-fast),
+    transform 0.17s cubic-bezier(.28,.7,.63,1.4), 
+    box-shadow 0.19s cubic-bezier(.19,.98,.34,1.1);
+}
+.like-btn:focus, .like-btn:focus-visible {
+  box-shadow: 0 0 0 3px #3b82f64a;
+  outline: 2px solid var(--primary);
+  outline-offset: 0.5px;
+}
+.like-btn:hover {
+  background: #dbeafe;
+  color: var(--success);
+  transform: scale(1.055);
+  opacity: 0.97;
+}
+.like-btn:active {
+  transform: scale(0.97);
+  background: #f0faff;
 }
 .like-btn__icon {
-  font-size: 1.15em;
+  font-size: 1.31em;
+  line-height: 1;
+  filter: drop-shadow(0 2px 2.5px #06b6d422);
+  padding-right: 0.04em;
+  transition: color 0.17s, transform 0.18s;
 }
+
 .like-btn__count {
   font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--secondary);
 }
-.like-btn:hover, .like-btn:focus  {
-  background: #e0f2fe;
-  color: #06b6d4;
-  box-shadow: 0 0 0 2px #3b82f655;
+
+.liked, .like-btn.liked {
+  color: #ef4444 !important;
+  background: #fdf2f8;
+  animation: liked-pulse 0.28s cubic-bezier(.33,.87,.46,1.09);
 }
-.liked {
-  color: #ef4444;
+.like-btn.liked:focus-visible, .like-btn.liked:focus {
+  box-shadow: 0 0 0 3px #ef4444aa;
+  outline: 2px solid #ef4444;
+}
+
+@keyframes liked-pulse {
+  0% { transform: scale(1.1); }
+  33% { transform: scale(1.28); }
+  80% { transform: scale(0.915);}
+  100% { transform: scale(1);}
 }

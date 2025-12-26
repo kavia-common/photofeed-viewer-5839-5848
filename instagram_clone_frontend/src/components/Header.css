@@ -1,42 +1,87 @@
 .header {
-  background: #fff;
-  border-bottom: 1px solid #e9ecef;
+  background: var(--surface);
+  border-bottom: 1.7px solid var(--border-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 2vw;
+  padding: 0.56em 2vw 0.56em 2vw;
+  min-height: 58px;
   position: sticky;
   top: 0;
   z-index: 10;
+  box-shadow: 0px 1.5px 13px 0px rgba(60, 60, 100, 0.065);
 }
 
 .header__brand {
-  color: #3b82f6;
-  font-weight: bold;
+  color: var(--primary);
+  font-weight: 700;
   letter-spacing: 1px;
-  font-size: 2rem;
+  font-size: 2.28rem;
   margin: 0;
-  font-family: "Segoe UI", "Roboto", sans-serif;
+  padding: 0.07em 0.23em 0.05em 0.05em;
+  font-family: var(--font-main);
+  line-height: var(--line-height-tight);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: background 0.19s, box-shadow 0.18s, color 0.13s;
+  outline: none;
+  box-shadow: none;
+}
+.header__brand:hover,
+.header__brand:focus-visible {
+  background: var(--accent-gradient);
+  box-shadow: 0 2.5px 13px 0 rgba(59,130,246,0.14);
+  color: var(--success);
+  text-decoration: none;
 }
 
 .header__search-form {
   margin: 0;
   width: 100%;
   max-width: 350px;
+  display: flex;
 }
 
 .header__search {
   width: 100%;
-  background: #f9fafb;
-  border: 1px solid #64748b;
-  border-radius: 8px;
-  padding: 0.6em 1em;
-  font-size: 1rem;
-  color: #111827;
+  background: var(--background);
+  border: 1.7px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.62em 1.1em;
+  font-size: 1.09rem;
+  color: var(--text-primary);
   outline: none;
-  transition: border-color 0.2s;
+  font-family: var(--font-main);
+  font-weight: 470;
+  box-shadow: none;
+  transition: border-color var(--trans-fast), box-shadow var(--trans-fast), background var(--trans-fast);
 }
-.header__search:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 2px #3b82f655;
+.header__search:focus,
+.header__search:focus-visible {
+  border-color: var(--primary);
+  box-shadow: var(--input-shadow-focus);
+  background: #f0f5ff;
+}
+
+.header__search::placeholder {
+  color: var(--secondary);
+  opacity: 0.88;
+  font-style: italic;
+  transition: color 0.18s;
+}
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+  .header__brand {
+    font-size: 1.48rem;
+    padding: 0.03em 0.14em 0.03em 0.07em;
+  }
+  .header__search {
+    font-size: 0.98rem;
+    padding: 0.5em 0.6em;
+  }
+  .header {
+    padding: 0.37em 3vw;
+    min-height: 44px;
+  }
 }
